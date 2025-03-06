@@ -1,0 +1,217 @@
+.site-title {
+    font-family: "Yellowtail", cursive;
+    font-weight: 2.8rem;
+    font-style: italic;
+    font-size: 3.6rem;
+}
+
+.site-header {
+    border-top: 1px solid #e8e8e8;
+    padding-top: 0.5rem;
+}
+
+.site-nav {
+    margin-top: 0.25rem;
+}
+
+.post-list-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.page-link {
+    font-weight: 500;
+}
+
+.category {
+    font-weight: 500;
+}
+
+.post {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.post-list {
+    >li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.post+.post::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: linear-gradient(to right,
+            rgba(203, 213, 224, 0) 0%,
+            rgba(203, 213, 224, 0.3) 50%,
+            rgba(203, 213, 224, 0) 100%);
+}
+
+.post-link {
+    margin-bottom: 0.5rem;
+}
+
+.post-link a {
+    color: #1a202c;
+    /* 更深的主标题色 */
+    font-size: 1.625rem;
+    font-weight: 500;
+}
+
+/* 元信息容器优化 */
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* 日期样式增强 */
+.post-time {
+    color: #4a5568;
+    font-size: 0.875rem;
+    position: relative;
+    padding-right: 1.25rem;
+}
+
+/* 标签交互优化 */
+.post-tag {
+    font-size: 0.875rem;
+    background: rgba(226, 232, 240, 0.6);
+    color: #2d3748;
+    padding: 0.1rem 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.post-tag:hover {
+    background: #e2e8f0;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 摘要行距优化 */
+.post-excerpt p {
+    font-family: 'MiSans Regular', sans-serif;
+    color: #718096;
+    line-height: 1.6;
+    max-width: 80ch;
+    margin-top: 1rem;
+    margin-bottom: 0px;
+}
+
+.post-title {
+    font-weight: 500;
+}
+
+.post-content {
+    font-family: 'MiSans Regular', sans-serif;
+    line-height: 2;
+
+    >p {
+        text-indent: 2em;
+    }
+}
+
+.post-content h3 {
+    font-family: 'MiSans Medium', sans-serif;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.post-content code {
+    background-color: #f6f8fa;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.post-content img {
+    display: flex;
+    justify-content: center;
+    /* 主轴居中 */
+    align-items: center;
+    /* 交叉轴居中 */
+}
+
+.post-content table {
+    font-size: 0.9rem;
+}
+
+.highlight {
+    @import "syntax-github-light";
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // iOS 平滑滚动
+    margin: 1rem 0;
+
+    table {
+        font-size: 0.9rem;
+        line-height: 1;
+        min-width: 768px; // 保持表格最小宽度
+    }
+}
+
+blockquote {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // iOS 平滑滚动
+    margin: 1rem 0;
+    font-size: 0.9rem;
+
+    // 嵌套引用块处理
+    blockquote {
+        margin-left: 0.5rem;
+        border-left-width: 2px;
+    }
+
+    // 表格嵌套优化（结合表格方案）
+    .table-wrapper {
+        margin: 0.5rem -1rem;
+        width: calc(100% + 2rem);
+    }
+}
+
+.footer-heading {
+    font-family: "Yellowtail", cursive;
+    font-size: 2rem;
+    font-weight: 1.5rem;
+}
+
+.p-name {
+    font-family: "Yellowtail", cursive;
+}
+
+.footer-col-3, .footer-col-2 {
+    font-family: 'MiSans Regular', sans-serif;
+    font-size: 0.9rem;
+}
+
+// /* 常规体 */
+// @font-face {
+//     font-family: MiSans;
+//     src: url('../../assets/fonts/MiSans-Regular.woff2') format('woff2');
+//     font-weight: 400;
+//     // font-display: swap;
+// }
+
+// /* 中等字重 */
+// @font-face {
+//     font-family: MiSans;
+//     src: url('../../assets/fonts/MiSans-Medium.woff2') format('woff2');
+//     font-weight: 500;
+//     // font-display: swap;
+// }
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../../assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 400;
+    // font-display: swap;
+}

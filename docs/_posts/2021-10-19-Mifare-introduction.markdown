@@ -2,6 +2,8 @@
 layout: post
 title: Mifare介绍
 author: sizundiang
+tags: [技术, 智能卡, Mifare]
+categories: tech_notes
 ---
 
 最近研究了下通过卡应用对卡内Mifare内存区域进行操作访问的可行性，顺便对Mifare的结构与机制做了一定的了解。本文将重点梳理Mifare内存区域的结构及安全机制，并结合现有设备，介绍几种对Mifare内存区域进行操作访问的方式.  
@@ -151,7 +153,7 @@ DKeyA与KeyA的映射规则为：
 - Javacard API 方式
 Javacard API中提供了读数据与写数据两个方法用以操作Mifare这类扩展内存区域：  
 
-```
+```java
 short readData(byte[] dest, short dest_off, byte[] auth_key, short auth_key_off, short auth_key_blen, short other_sector, short other_block, short other_len) throws ExternalException
 boolean writeData(byte[] src, short src_off, short src_blen, byte[] auth_key, short auth_key_off, short auth_key_blen, short other_sector, short other_block) throws ExternalException
 ```
