@@ -1,4 +1,10 @@
-# OpenClaw信创电脑安装记录（含x86和arm64两种指令集类型）
+---
+layout: post
+title: OpenClaw信创电脑安装记录（含x86和arm64两种指令集类型）
+author: sizundiang
+tags: [技术, AI, OpenClaw]
+categories: tech_notes
+---
 
 统信UOS桌面操作系统目前已成为不可忽视的操作系统当中的一强，大家更熟悉的可能是信创电脑这个名字，在很多行业已经得到了推广与使用，统信系统兼容多种指令集，目前市面上有x86架构（以联想开天为代表）和arm64架构（以华为擎云为代表），至少我能接触到的有这两类。
 
